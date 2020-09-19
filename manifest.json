@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "modernSCH",
+    "version": "1.0",
+
+    "description": "Better SCH Frontpage.",
+    "icons": {
+        "48": "icons/modernSCH.svg"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://homepage.sch.ac.kr/sch/*"],
+            "js": ["js/homepage.js"]
+        }
+    ],
+
+    "web_accessible_resources": [
+        "css/*.css",
+        "js/*.js"
+    ]
+}
