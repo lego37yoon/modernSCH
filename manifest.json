@@ -17,6 +17,7 @@
 
     "web_accessible_resources": [
         "css/*.css",
-        "js/*.js"
+        "js/*.js",
+        "assets/*"
     ]
 }
