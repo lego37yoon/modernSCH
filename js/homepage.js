@@ -8,14 +8,24 @@ var pureDropdown = document.createElement("link");
 pureDropdown.rel = "stylesheet";
 pureDropdown.type = "text/css";
 pureDropdown.href = browser.extension.getURL("../css/menus-dropdown.css");
+var pureButton = document.createElement("link");
+pureButton.rel = "stylesheet";
+pureButton.type = "text/css";
+pureButton.href = browser.extension.getURL("../css/buttons.css");
+var pureButtonCore = document.createElement("link");
+pureButtonCore.rel = "stylesheet";
+pureButtonCore.type = "text/css";
+pureButtonCore.href = browser.extension.getURL("../css/buttons-core.css");
+//자체 CSS 들여오기
+var modernschCSS = document.createElement("link");
+modernschCSS.rel = "stylesheet";
+modernschCSS.type = "text/css";
+modernschCSS.href = browser.extension.getURL("../css/modernsch.css");
 document.head.appendChild(pureCore);
 document.head.appendChild(pureDropdown);
-
-//995px 제한 해제
-let layout995 = document.getElementsByClassName('lo_995');
-while(layout995[0]) {
-    layout995[0].removeAttribute("class");
-}
+document.head.appendChild(pureButton);
+document.head.appendChild(pureButtonCore);
+document.head.appendChild(modernschCSS);
 
 /* 상단 헤더 */
 //로고 투명으로
@@ -74,6 +84,244 @@ headerEnglish.style.width = "";
 headerEnglish.innerHTML = "English";
 headerEnglish.parentNode.setAttribute('style', 'position: relative;float: left;margin-left: 5px; margin-right: 5px;');
 
+//메인 메뉴 디자인 변경
+let univIntro = document.getElementById('jwxe_1298022569424');
+univIntro.innerHTML = "대학소개";
+univIntro.style.color = "#00687F";
+univIntro.style.width = "60px";
+univIntro.style.textDecoration = "none";
+univIntro.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univIntro.style.fontSize = "16px";
+univIntro.style.top = "-8px";
+let uISCHInfo = document.getElementById('jwxe_1298022569866');
+uISCHInfo.innerHTML = "순천향안내";
+uISCHInfo.style.color = "#00687F";
+uISCHInfo.style.fontSize = "14px";
+uISCHInfo.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let schSymbol = document.getElementById('jwxe_1298022569503');
+schSymbol.innerHTML = "학교상징";
+schSymbol.style.color = "#00687F";
+schSymbol.style.fontSize = "14px";
+schSymbol.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let schStatus = document.getElementById('jwxe_1298022570352');
+schStatus.innerHTML = "현황"
+schStatus.style.color = "#00687F";
+schStatus.style.fontSize = "14px";
+schStatus.style.left = "130px";
+schStatus.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let schPromo = document.getElementById('jwxe_1298022570125');
+schPromo.innerHTML = "대학홍보";
+schPromo.style.color = "#00687F";
+schPromo.style.fontSize = "14px";
+schPromo.style.left = "165px";
+schPromo.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let univIpsi = document.getElementById('jwxe_1298022569947');
+univIpsi.innerHTML = "입학안내";
+univIpsi.style.color = "#00687F";
+univIpsi.style.width = "60px";
+univIpsi.style.textDecoration = "none";
+univIpsi.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univIpsi.style.fontSize = "16px";
+univIpsi.style.top = "-8px";
+let univGo = document.getElementById('jwxe_1298022569642');
+univGo.innerHTML = "대학입학";
+univGo.style.color = "#00687F";
+univGo.style.fontSize = "14px";
+univGo.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let gradGo = document.getElementById('jwxe_1298022570094');
+gradGo.innerHTML = "대학원 입학";
+gradGo.style.color = "#00687F";
+gradGo.style.fontSize = "14px";
+gradGo.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+gradGo.style.left = "60px";
+gradGo.style.width = "70px";
+let foreGo = document.getElementById('jwxe_1298022570194');
+foreGo.innerHTML = "외국인입학";
+foreGo.style.color = "#00687F";
+foreGo.style.fontSize = "14px";
+foreGo.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+foreGo.style.left = "135px";
+foreGo.style.width = "70px";
+let alwaysEdu = document.getElementById('jwxe_1298022570173');
+alwaysEdu.innerHTML = "평생교육원";
+alwaysEdu.style.color = "#00687F";
+alwaysEdu.style.fontSize = "14px";
+alwaysEdu.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+alwaysEdu.style.left = "205px";
+alwaysEdu.style.width = "70px";
+let univDeparts = document.getElementById('jwxe_1298022569714');
+univDeparts.innerHTML = "대학/대학원";
+univDeparts.style.color = "#00687F";
+univDeparts.style.width = "100px";
+univDeparts.style.textDecoration = "none";
+univDeparts.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univDeparts.style.fontSize = "16px";
+univDeparts.style.top = "-8px";
+let departUniv = document.getElementById('jwxe_1298022569971');
+departUniv.innerHTML = "단과대학"
+departUniv.style.color = "#00687F";
+departUniv.style.fontSize = "14px";
+departUniv.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let departGrad = document.getElementById('jwxe_1298022570279');
+departGrad.innerHTML = "대학원";
+departGrad.style.color = "#00687F";
+departGrad.style.left = "60px";
+departGrad.style.fontSize = "14px";
+departGrad.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let univLab = document.getElementById('jwxe_1298022569758');
+univLab.innerHTML = "대학기관";
+univLab.style.color = "#00687F";
+univLab.style.width = "80px";
+univLab.style.textDecoration = "none";
+univLab.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univLab.style.fontSize = "16px";
+univLab.style.top = "-8px";
+let univCenter = document.getElementById('jwxe_1298022569949');
+univCenter.innerHTML = "대학본부";
+univCenter.style.color = "#00687F";
+univCenter.style.fontSize = "14px";
+univCenter.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let univCorp = document.getElementById('jwxe_1298022569912');
+univCorp.innerHTML = "산학/연구";
+univCorp.style.color = "#00687F";
+univCorp.style.fontSize = "14px";
+univCorp.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univCorp.style.left = "60px";
+let univChild = document.getElementById('jwxe_1298022570226');
+univChild.innerHTML = "부속/부설";
+univChild.style.color = "#00687F";
+univChild.style.fontSize = "14px";
+univChild.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univChild.style.left = "130px";
+univChild.style.width = "100px";
+let univPrime = document.getElementById('jwxe_1369098801234');
+univPrime.innerHTML = "PRIME";
+univPrime.style.color = "#00687F";
+univPrime.style.fontSize = "14px";
+univPrime.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univPrime.style.left = "200px";
+univPrime.style.width = "60px";
+let univHospital = document.getElementById('jwxe_1298022569764');
+univHospital.innerHTML = "부속병원";
+univHospital.style.color = "#00687F";
+univHospital.style.fontSize = "14px";
+univHospital.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univHospital.style.left = "250px";
+univHospital.style.width = "60px";
+let univLife = document.getElementById('jwxe_1298022570062');
+univLife.innerHTML = "대학생활";
+univLife.style.color = "#00687F";
+univLife.style.width = "80px";
+univLife.style.textDecoration = "none";
+univLife.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univLife.style.fontSize = "16px";
+univLife.style.top = "-8px";
+let univSchedule = document.getElementById('jwxe_1298022569810');
+univSchedule.innerHTML = "학사일정";
+univSchedule.style.color = "#00687F";
+univSchedule.style.width = "60px";
+univSchedule.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univSchedule.style.fontSize = "14px";
+let univIntranet = document.getElementById('jwxe_1298022570037');
+univIntranet.innerHTML = "인트라넷";
+univIntranet.style.color = "#00687F";
+univIntranet.style.width = "80px";
+univIntranet.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univIntranet.style.fontSize = "14px";
+let univAnyQ = document.getElementById('jwxe_1298022570342');
+univAnyQ.innerHTML = "AnyQ";
+univAnyQ.style.color = "#00687F";
+univAnyQ.style.width = "80px";
+univAnyQ.style.left = "120px";
+univAnyQ.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univAnyQ.style.fontSize = "14px";
+let univNew = document.getElementById('jwxe_1298022570257');
+univNew.innerHTML = "새소식";
+univNew.style.color = "#00687F";
+univNew.style.width = "60px";
+univNew.style.left = "160px";
+univNew.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univNew.style.fontSize = "14px";
+let univNumSearch = document.getElementById('jwxe_1298022570612');
+univNumSearch.innerHTML = "전화번호검색";
+univNumSearch.style.color = "#00687F";
+univNumSearch.style.width = "80px";
+univNumSearch.style.left = "205px";
+univNumSearch.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univNumSearch.style.fontSize = "14px";
+let univMailSearch = document.getElementById('jwxe_1298022570452');
+univMailSearch.innerHTML = "메일검색";
+univMailSearch.style.color = "#00687F";
+univMailSearch.style.width = "80px";
+univMailSearch.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univMailSearch.style.fontSize = "14px";
+let univCare = document.getElementById('jwxe_1298022570296');
+univCare.innerHTML = "학생복지";
+univCare.style.color = "#00687F";
+univCare.style.width = "80px";
+univCare.style.left = "345px";
+univCare.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univCare.style.fontSize = "14px";
+let univStuGroup = document.getElementById('jwxe_1298022570108');
+univStuGroup.innerHTML = "학생자치기구";
+univStuGroup.style.color = "#00687F";
+univStuGroup.style.width = "80px";
+univStuGroup.style.left = "400px";
+univStuGroup.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univStuGroup.style.fontSize = "14px";
+let univWorld = document.getElementById('jwxe_1298022569694');
+univWorld.innerHTML = "순천향세상";
+univWorld.style.color = "#00687F";
+univWorld.style.textDecoration = "none";
+univWorld.style.width = "80px";
+univWorld.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univWorld.style.fontSize = "16px";
+univWorld.style.top = "-8px";
+let univNotice = document.getElementById('jwxe_1298022570448');
+univNotice.innerHTML = "공지사항";
+univNotice.style.color = "#00687F";
+univNotice.style.width = "60px";
+univNotice.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univNotice.style.fontSize = "14px";
+let univMNotice = document.getElementById('jwxe_1298022570002');
+univMNotice.innerHTML = "입찰공고";
+univMNotice.style.color = "#00687F";
+univMNotice.style.width = "60px";
+univMNotice.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univMNotice.style.fontSize = "14px";
+let univFreeboard = document.getElementById('jwxe_1298022570745');
+univFreeboard.innerHTML = "자유게시판";
+univFreeboard.style.color = "#00687F";
+univFreeboard.style.width = "70px";
+univFreeboard.style.left = "118px";
+univFreeboard.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univFreeboard.style.fontSize = "14px";
+let univExchange = document.getElementById('jwxe_1298022570321');
+univExchange.innerHTML = "벼룩시장";
+univExchange.style.color = "#00687F";
+univExchange.style.width = "60px";
+univExchange.style.left = "190px";
+univExchange.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+univExchange.style.fontSize = "14px";
+let univAllMenu = document.getElementById('jwxe_1305609065745');
+univAllMenu.innerHTML = "메뉴 전체보기"
+univAllMenu.style.fontSize = "11px";
+univAllMenu.style.width = "80px";
+univAllMenu.style.color = "#00687F";
+univAllMenu.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let univAllDepart = document.getElementById('jwxe_1305609293490');
+univAllDepart.innerHTML = "학과 / 전공보기"
+univAllDepart.style.fontSize = "11px";
+univAllDepart.style.width = "100px";
+univAllDepart.style.color = "#00687F";
+univAllDepart.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+let univNetwork = document.getElementById('jwxe_1305609562261');
+univNetwork.innerHTML = "바로가기"
+univNetwork.style.fontSize = "11px";
+univNetwork.style.width = "80px";
+univNetwork.style.color = "#00687F";
+univNetwork.style.fontFamily = "'한컴산뜻돋움', sans-serif";
+
 
 //메인 이미지 정렬 및 색상 채우기
 let mainBannerNum = 0;
@@ -104,12 +352,23 @@ for (let i = 1; i < 7; i++) {
 document.getElementById("jwxe_main_content").style.backgroundColor = "white";
 document.body.style.backgroundColor = "white";
 try {
-    // 순천향인 버튼 제거
-    document.getElementById("jwxe_1297997945786").innerHTML = "순천향인"
-    //교직원 버튼 제거
-    document.getElementById("jwxe_1297997969913").innerHTML = "교직원"
-    //방문인 버튼 제거
-    document.getElementById("jwxe_1298002463910").innerHTML = "방문인"
+    // 순천향인 버튼 제거, 속성 지정, 버튼 디자인
+    let schPeopleBtn = document.getElementById("jwxe_1297997945786");
+    schPeopleBtn.innerHTML = "순천향인";
+    schPeopleBtn.style.width = "70px";
+    schPeopleBtn.setAttribute('class','pure-button');
+    //교직원 버튼 제거, 속성 지정, 버튼 디자인
+    let schProfessorBtn = document.getElementById("jwxe_1297997969913");
+    schProfessorBtn.innerHTML = "교직원";
+    schProfessorBtn.style.width = "70px";
+    schProfessorBtn.style.left = "70px";
+    schProfessorBtn.setAttribute('class','pure-button');
+    //방문인 버튼 제거, 속성 지정, 버튼 디자인
+    let schVisitorBtn = document.getElementById("jwxe_1298002463910");
+    schVisitorBtn.innerHTML = "방문인";
+    schVisitorBtn.style.width = "70px";
+    schVisitorBtn.style.left = "144px";
+    schVisitorBtn.setAttribute('class', 'pure-button');
     //각종 공지 배경 제거
     let notices = document.getElementsByClassName("jwxe_div");
     notices[0].style.background = "";
@@ -119,8 +378,207 @@ try {
     for (let i = 0; i < noticeArticles.length; i++) {
         noticeArticles[i].style.color = "black";
     }
-    //공지 제목들 이미지 제거
-    
+    //공지 제목들 스타일 조정
+    let schNotice = document.getElementById("jwxe_1298005370608");
+    schNotice.innerHTML = "공지사항";
+    schNotice.setAttribute('class', 'pure-button');
+    schNotice.setAttribute('style', '');
+    schNotice.parentNode.parentNode.parentNode.style.left = "250px";
+    schNotice.parentNode.parentNode.parentNode.style.width = "400px";
+    schNotice.parentNode.parentNode.parentNode.style.top = "10px";
+    let schScheduleNotice = document.getElementById("jwxe_1298005426312");
+    schScheduleNotice.innerHTML = "학사공지";
+    schScheduleNotice.setAttribute('class', 'pure-button');
+    schScheduleNotice.setAttribute('style', '');
+    let schJobNotice = document.getElementById("jwxe_1298005460497");
+    schJobNotice.innerHTML = "취업정보";
+    schJobNotice.setAttribute('class', 'pure-button');
+    schJobNotice.setAttribute('style', '');
+    let schSupportNotice = document.getElementById("jwxe_1298005501500");
+    schSupportNotice.innerHTML = "장학공지";
+    schSupportNotice.setAttribute('class', 'pure-button');
+    schSupportNotice.setAttribute('style', '');
+    let schCorpNotice = document.getElementById("jwxe_1298005544582");
+    schCorpNotice.innerHTML = "입찰공고";
+    schCorpNotice.setAttribute('class', 'pure-button');
+    schCorpNotice.setAttribute('style', '');
+    let schEventNotice = document.getElementById("jwxe_1298005544584");
+    schEventNotice.innerHTML = "행사안내";
+    schEventNotice.setAttribute('class', 'pure-button');
+    schEventNotice.setAttribute('style', '');
+    schEventNotice.parentNode.parentNode.parentNode.style.left = "630px";
+    schEventNotice.parentNode.parentNode.parentNode.style.top = "10px";
+    schEventNotice.parentNode.parentNode.style.top = "5px";
+    schEventNotice.parentNode.parentNode.style.left = "";
+    schEventNotice.parentNode.childNodes[3].style.left = "";
+    let schNewsNotice = document.getElementById("jwxe_1298005544588");
+    schNewsNotice.innerHTML = "언론 속 순천향"
+    schNewsNotice.setAttribute('class', 'pure-button');
+    schNewsNotice.setAttribute('style', '');
+
+    let schNoticeMore = document.getElementById("jwxe_1298007864143");
+    schNoticeMore.style.left = "310px";
+    schNoticeMore.style.top = "-45px";
+    schNoticeMore.style.fontWeight = "bold"
+    schNoticeMore.style.fontSize = "20pt";
+    schNoticeMore.innerHTML = "+"
+    schNoticeMore.style.color = "#00687F"
+    schNoticeMore.style.textDecoration = "none";
+    let schScheduleNoticeMore = document.getElementById("jwxe_1298007956826");
+    schScheduleNoticeMore.style.left = "310px";
+    schScheduleNoticeMore.style.top = "-45px";
+    schScheduleNoticeMore.style.fontWeight = "bold"
+    schScheduleNoticeMore.style.fontSize = "20pt";
+    schScheduleNoticeMore.innerHTML = "+"
+    schScheduleNoticeMore.style.color = "#00687F"
+    schScheduleNoticeMore.style.textDecoration = "none";
+    let schJobNoticeMore = document.getElementById("jwxe_1298007999987");
+    schJobNoticeMore.style.left = "310px";
+    schJobNoticeMore.style.top = "-45px";
+    schJobNoticeMore.style.fontWeight = "bold"
+    schJobNoticeMore.style.fontSize = "20pt";
+    schJobNoticeMore.innerHTML = "+"
+    schJobNoticeMore.style.color = "#00687F"
+    schJobNoticeMore.style.textDecoration = "none";
+    let schSupportNoticeMore = document.getElementById("jwxe_1298008038440");
+    schSupportNoticeMore.style.left = "310px";
+    schSupportNoticeMore.style.top = "-45px";
+    schSupportNoticeMore.style.fontWeight = "bold"
+    schSupportNoticeMore.style.fontSize = "20pt";
+    schSupportNoticeMore.innerHTML = "+"
+    schSupportNoticeMore.style.color = "#00687F"
+    schSupportNoticeMore.style.textDecoration = "none";
+    let schCorpNoticeMore = document.getElementById("jwxe_1298008077443");
+    schCorpNoticeMore.style.left = "310px";
+    schCorpNoticeMore.style.top = "-45px";
+    schCorpNoticeMore.style.fontWeight = "bold"
+    schCorpNoticeMore.style.fontSize = "20pt";
+    schCorpNoticeMore.innerHTML = "+"
+    schCorpNoticeMore.style.color = "#00687F"
+    schCorpNoticeMore.style.textDecoration = "none";
+    //공지 목록들 스타일 조정
+    let noticeList = document.getElementsByClassName('jwxe_ul');
+    for(let i = 8; i < 15; i++) {
+        noticeList[i].style.top = "35px";
+    }
+    //공지 내용들 스타일 조정
+    let noticeItems = document.getElementsByClassName('main_board');
+    for(let i = 0; i < 25; i++) {
+        noticeItems[i].parentNode.style.width = "350px";
+        noticeItems[i].childNodes[0].childNodes[0].style.fontSize = "13px";
+    }
+    for(let i = 25; i < 35; i++) {
+        noticeItems[i].parentNode.style.width = "400px";
+        noticeItems[i].parentNode.style.left = "";
+        noticeItems[i].childNodes[1].childNodes[0].style.fontSize = "13px";
+        noticeItems[i].childNodes[2].style.left = "300px";
+        noticeItems[i].childNodes[2].style.fontSize = "13px";
+    }
+
+    //순천향 큰배너 디자인 변경
+    let bigBannerPlay = document.querySelector("a[onclick*='javascript:popupOn();']");
+    bigBannerPlay.innerHTML = "▶";
+    bigBannerPlay.style.color = "#00687F";
+    bigBannerPlay.parentNode.style.top = "-5px";
+    bigBannerPlay.parentNode.style.left = "100px";
+    bigBannerPlay.style.fontSize = "12pt";
+    bigBannerPlay.style.textDecoration = "none";
+    let bigBannerStop = document.querySelector("a[onclick*='javascript:popupOff();']");
+    bigBannerStop.innerHTML = "⏸";
+    bigBannerStop.style.color = "#00687F";
+    bigBannerStop.style.fontSize = "12pt";
+    bigBannerStop.style.textDecoration = "none";
+    document.getElementById('t1').style.background = "";
+    document.getElementById('t2').style.background = "";
+    document.getElementById('t3').style.background = "";
+    document.getElementById('t4').style.background = "";
+    document.getElementById('t5').style.background = "";
+    let bigBannerFirst = document.getElementById('jwxe_1300156697356');
+    bigBannerFirst.innerHTML = "1";
+    bigBannerFirst.style.backgroundColor = "#00687F";
+    bigBannerFirst.style.color = "white";
+    bigBannerFirst.style.left = "140px";
+    bigBannerFirst.style.width = "15px";
+    bigBannerFirst.style.height = "15px";
+    bigBannerFirst.style.lineHeight = "15px";
+    bigBannerFirst.style.borderRadius = "5px";
+    bigBannerFirst.style.top = "3px";
+    bigBannerFirst.style.textAlign = "center";
+    let bigBannerSecond = document.getElementById('jwxe_1298009735836');
+    bigBannerSecond.innerHTML = "2";
+    bigBannerSecond.style.backgroundColor = "#00687F";
+    bigBannerSecond.style.color = "white";
+    bigBannerSecond.style.left = "156px";
+    bigBannerSecond.style.width = "15px";
+    bigBannerSecond.style.height = "15px";
+    bigBannerSecond.style.lineHeight = "15px";
+    bigBannerSecond.style.borderRadius = "5px";
+    bigBannerSecond.style.top = "3px";
+    bigBannerSecond.style.textAlign = "center";
+    let bigBannerThree = document.getElementById('jwxe_1298009655708');
+    bigBannerThree.innerHTML = "3";
+    bigBannerThree.style.backgroundColor = "#00687F";
+    bigBannerThree.style.color = "white";
+    bigBannerThree.style.left = "172px";
+    bigBannerThree.style.width = "15px";
+    bigBannerThree.style.height = "15px";
+    bigBannerThree.style.lineHeight = "15px";
+    bigBannerThree.style.borderRadius = "5px";
+    bigBannerThree.style.top = "3px";
+    bigBannerThree.style.textAlign = "center";
+    let bigBannerFour = document.getElementById('jwxe_1298009694996');
+    bigBannerFour.innerHTML = "4";
+    bigBannerFour.style.backgroundColor = "#00687F";
+    bigBannerFour.style.color = "white";
+    bigBannerFour.style.left = "188px";
+    bigBannerFour.style.width = "15px";
+    bigBannerFour.style.height = "15px";
+    bigBannerFour.style.lineHeight = "15px";
+    bigBannerFour.style.borderRadius = "5px";
+    bigBannerFour.style.top = "3px";
+    bigBannerFour.style.textAlign = "center";
+    let bigBannerFive = document.getElementById('jwxe_1298009694999');
+    bigBannerFive.innerHTML = "5";
+    bigBannerFive.style.backgroundColor = "#00687F";
+    bigBannerFive.style.color = "white";
+    bigBannerFive.style.left = "204px";
+    bigBannerFive.style.width = "15px";
+    bigBannerFive.style.height = "15px";
+    bigBannerFive.style.lineHeight = "15px";
+    bigBannerFive.style.borderRadius = "5px";
+    bigBannerFive.style.top = "3px";
+    bigBannerFive.style.textAlign = "center";
+
+    //순천향 작은 배너 디자인 변경
+    document.getElementById('banner_left').remove();
+    document.getElementById('jwxe_1298597242421').remove();
+    document.getElementById('jwxe_1298539566766').remove();
+    document.getElementById('banner_stop').remove();
+    document.getElementsByClassName('jwxe_banner2')[0].parentNode.style.left = "270px";
+    document.getElementsByClassName('jwxe_banner2')[0].parentNode.style.top = "185px";
+    document.getElementsByClassName('jwxe_banner2')[0].setAttribute('class', '');
+    let schFund = document.getElementById('jwxe_1298010224899');
+    schFund.childNodes[0].style.borderRadius = "5px";
+    schFund.parentNode.parentNode.parentNode.style.left = "260px";
+    let schLibrary = document.getElementById('jwxe_1298010274144');
+    schLibrary.childNodes[0].style.borderRadius = "5px";
+    let schMinwon = document.getElementById('jwxe_1298010125158');
+    schMinwon.childNodes[0].style.borderRadius = "5px";
+    let schWifi = document.getElementById('jwxe_1317188506698');
+    schWifi.childNodes[0].style.borderRadius = "5px";
+    let schCopy = document.getElementById('jwxe_1354238196226');
+    schCopy.childNodes[0].style.borderRadius = "5px";
+    //미들 배너 디자인 변경
+    let schMiddleBannerOne = document.getElementById('jwxe_1298003064729');
+    schMiddleBannerOne.parentNode.parentNode.style.left = "630px";
+    schMiddleBannerOne.childNodes[0].style.borderRadius = "5px";
+    let schMiddleBannerSecond = document.getElementById('jwxe_1298003107718');
+    schMiddleBannerSecond.style.left = "109px";
+    schMiddleBannerSecond.childNodes[0].style.borderRadius = "5px";
+    let schMiddleBannerThree = document.getElementById('jwxe_1298003133531');
+    schMiddleBannerThree.style.left = "215px";
+    schMiddleBannerThree.childNodes[0].style.borderRadius = "5px";
+
 } catch (error) {
     
 }
@@ -183,8 +641,9 @@ try {
     
 }
 try {
+    //QR코드 위치 조정
     let footerQR = document.getElementsByClassName("jwxe_include_item");
-    footerQR[0].setAttribute('style', 'right: 66%; bottom: -0');
+    footerQR[0].setAttribute('style', 'right: 1.5%; bottom: 20px');
 } catch (error) {
     
 }

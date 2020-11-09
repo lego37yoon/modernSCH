@@ -1,0 +1,45 @@
+i {
+    font-size: 15pt;
+}
+#jwxe_1297997945786, #jwxe_1297997969913, #jwxe_1298002463910 {
+    color: white;
+    background-color: #00687F;
+    text-decoration: none;
+    text-align: center;
+    line-height: 70px;
+    font-size: 10pt;
+    font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', sans-serif;
+}
+
+#jwxe_1298005370608, #jwxe_1298005426312, #jwxe_1298005460497, #jwxe_1298005501500, #jwxe_1298005544582 {
+    color: white;
+    background-color: #00687F;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 9.5pt;
+    height: 30px;
+    width: 60px;
+    padding-left: 5px;
+    padding-top: 7px;
+}
+
+#jwxe_1298005544588, #jwxe_1298005544584 {
+    color: white;
+    background-color: #00687F;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 9.5pt;
+    height: 30px;
+    padding-left: 15px;
+    padding-top: 7px;
+}
+
+#jwxe_1298005370608:hover, #jwxe_1298005426312:hover, #jwxe_1298005460497:hover, #jwxe_1298005501500:hover, #jwxe_1298005544582:hover, #jwxe_1298005544588:hover, #jwxe_1298005544584:hover {
+    color: black;
+    background-color: azure;
+}
+
+#jwxe_1298005370608:focus, #jwxe_1298005426312:focus, #jwxe_1298005460497:focus, #jwxe_1298005501500:focus, #jwxe_1298005544582:focus, #jwxe_1298005544588:focus, #jwxe_1298005544584:focus {
+    color: black;
+    background-color: azure;
+}
