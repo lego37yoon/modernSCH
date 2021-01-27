@@ -1,6 +1,53 @@
-i {
-    font-size: 15pt;
+@font-face {
+    font-family: 'IBMPlexSansKR-Text';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+html {
+    font-family: 'IBMPlexSansKR-Text', 'Noto Sans KR', sans-serif;
+}
+
+i {
+    font-size: 24px;
+    color: #00687F;
+    margin: 5px;
+}
+
+.lo_995 {
+    clear: both;
+    position: relative;
+}
+
+.Top_Menu {
+    margin-top: 5px;
+    color: #00687F;
+    text-decoration: none;
+    border-bottom: 1px solid #007681;
+    height: 52px;
+}
+.jwxe_menu_box0 {
+    display: none;
+}
+.jwxe_ul {
+    background-color: white;
+    border: 1px solid #007681;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 995px) {
+    .Top_Menu {
+        margin-top: 44px;
+    }
+    .jwxe_menu_box0 {
+        display: inline-block;
+        margin-left: 300px;
+    }
+}
+
 #jwxe_1297997945786, #jwxe_1297997969913, #jwxe_1298002463910 {
     color: white;
     background-color: #00687F;
