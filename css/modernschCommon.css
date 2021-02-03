@@ -32,10 +32,15 @@ i {
 .jwxe_menu_box0 {
     display: none;
 }
+.jwxe_menu_box0 li {
+    font-size: 20px;
+}
 .jwxe_ul {
     background-color: white;
     border: 1px solid #007681;
     border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 @media screen and (min-width: 995px) {
