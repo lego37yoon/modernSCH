@@ -35,7 +35,7 @@ i {
 .jwxe_menu_box0 li {
     font-size: 20px;
 }
-.jwxe_ul {
+.jwxe_menu_box0 li .jwxe_ul {
     background-color: white;
     border: 1px solid #007681;
     border-radius: 5px;
