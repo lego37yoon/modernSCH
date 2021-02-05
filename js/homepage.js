@@ -66,7 +66,6 @@ if(document.querySelector("img[src*='/sch/_res/img/ttmenu_logout.gif']") === nul
 }
 headerLogin.parentNode.setAttribute('style', 'position: relative;float: left;margin-left: 4px;');
 headerLogin.parentNode.parentNode.style.width = "";
-headerLogin.parentNode.parentNode.removeAttribute("class");
 //상단 메뉴 | 제거
 let container = document.querySelector("#login_list");
 let loginBar = container.querySelectorAll("img[src*='https://homepage.sch.ac.kr/sch/_res/img/ttmenu_bar.gif']");
@@ -88,12 +87,13 @@ headerEnglish.parentNode.setAttribute('style', 'position: relative;float: left;m
 //메인 메뉴 스타일 변경
 document.getElementsByClassName("jwxe_menu_box0")[0].removeAttribute("style");
 //메인 메뉴 이미지 제거
+//대학소개
 let univIntro = document.getElementById('jwxe_1298022569424');
 univIntro.innerHTML = "대학소개";
-univIntro.style.color = "#00687F";
-univIntro.style.width = "60px";
-univIntro.style.textDecoration = "none";
-univIntro.style.top = "-8px";
+univIntro.removeAttribute("class");
+univIntro.style.width = "";
+univIntro.style.top = "";
+univIntro.style.height = "";
 let uISCHInfo = document.getElementById('jwxe_1298022569866');
 uISCHInfo.innerHTML = "순천향안내";
 uISCHInfo.style.color = "#00687F";
@@ -109,11 +109,12 @@ schPromo.innerHTML = "대학홍보";
 schPromo.style.color = "#00687F";
 schPromo.style.left = "165px";
 let univIpsi = document.getElementById('jwxe_1298022569947');
+//입학안내
 univIpsi.innerHTML = "입학안내";
-univIpsi.style.color = "#00687F";
-univIpsi.style.width = "60px";
-univIpsi.style.textDecoration = "none";
-univIpsi.style.top = "-8px";
+univIpsi.removeAttribute("class");
+univIpsi.style.width = "";
+univIpsi.style.top = "";
+univIpsi.style.height = "";
 let univGo = document.getElementById('jwxe_1298022569642');
 univGo.innerHTML = "대학입학";
 univGo.style.color = "#00687F";
@@ -132,12 +133,13 @@ alwaysEdu.innerHTML = "평생교육원";
 alwaysEdu.style.color = "#00687F";
 alwaysEdu.style.left = "205px";
 alwaysEdu.style.width = "70px";
+//대학 혹은 대학원
 let univDeparts = document.getElementById('jwxe_1298022569714');
 univDeparts.innerHTML = "대학/대학원";
-univDeparts.style.color = "#00687F";
-univDeparts.style.width = "100px";
-univDeparts.style.textDecoration = "none";
-univDeparts.style.top = "-8px";
+univDeparts.removeAttribute("class");
+univDeparts.style.width = "";
+univDeparts.style.top = ""
+univDeparts.style.height = "";
 let departUniv = document.getElementById('jwxe_1298022569971');
 departUniv.innerHTML = "단과대학"
 departUniv.style.color = "#00687F";
@@ -145,12 +147,13 @@ let departGrad = document.getElementById('jwxe_1298022570279');
 departGrad.innerHTML = "대학원";
 departGrad.style.color = "#00687F";
 departGrad.style.left = "60px";
+//대학 기관
 let univLab = document.getElementById('jwxe_1298022569758');
 univLab.innerHTML = "대학기관";
-univLab.style.color = "#00687F";
-univLab.style.width = "80px";
-univLab.style.textDecoration = "none";
-univLab.style.top = "-8px";
+univLab.removeAttribute("class");
+univLab.style.width = "";
+univLab.style.top = "";
+univLab.style.height = "";
 let univCenter = document.getElementById('jwxe_1298022569949');
 univCenter.innerHTML = "대학본부";
 univCenter.style.color = "#00687F";
@@ -173,12 +176,13 @@ univHospital.innerHTML = "부속병원";
 univHospital.style.color = "#00687F";
 univHospital.style.left = "250px";
 univHospital.style.width = "60px";
+//대학 생활
 let univLife = document.getElementById('jwxe_1298022570062');
 univLife.innerHTML = "대학생활";
-univLife.style.color = "#00687F";
-univLife.style.width = "80px";
-univLife.style.textDecoration = "none";
-univLife.style.top = "-8px";
+univLife.removeAttribute("class");
+univLife.style.width = "";
+univLife.style.top = ""
+univLife.style.height = "";
 let univSchedule = document.getElementById('jwxe_1298022569810');
 univSchedule.innerHTML = "학사일정";
 univSchedule.style.color = "#00687F";
@@ -216,12 +220,13 @@ univStuGroup.innerHTML = "학생자치기구";
 univStuGroup.style.color = "#00687F";
 univStuGroup.style.width = "80px";
 univStuGroup.style.left = "400px";
+//순천향 세상
 let univWorld = document.getElementById('jwxe_1298022569694');
 univWorld.innerHTML = "순천향세상";
-univWorld.style.color = "#00687F";
-univWorld.style.textDecoration = "none";
-univWorld.style.width = "80px";
-univWorld.style.top = "-8px";
+univWorld.removeAttribute("class");
+univWorld.style.width = "";
+univWorld.style.top = "";
+univWorld.style.height = "";
 let univNotice = document.getElementById('jwxe_1298022570448');
 univNotice.innerHTML = "공지사항";
 univNotice.style.color = "#00687F";
