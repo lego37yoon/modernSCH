@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'IBMPlexSansKR-Text';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff') format('woff');
+    font-family: 'GoyangIlsan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,7 +8,7 @@
 
 
 html {
-    font-family: 'IBMPlexSansKR-Text', 'Noto Sans KR', sans-serif;
+    font-family: 'GoyangIlsan', 'Noto Sans KR', sans-serif;
 }
 
 i {
@@ -29,12 +29,19 @@ i {
     border-bottom: 1px solid #007681;
     height: 52px;
 }
+
+/* 메인 로고 */
+.Top_Menu .jwxe_html h1 {
+    margin: 0 20px 20px 20px;
+}
+
+/* 메인 메뉴 */
 .jwxe_menu_box0 {
     display: none;
 }
 .jwxe_menu_box0 li {
     font-size: 20px;
-    margin: 0 40px 0 40px;
+    margin: 10px 20px 0 20px;
     display: inline;
 }
 .jwxe_menu_box0 li a {
@@ -51,13 +58,24 @@ i {
 
 @media screen and (min-width: 995px) {
     .Top_Menu {
-        margin-top: 44px;
+        margin-top: 20px;
+    }
+    .Top_Menu .jwxe_html h1 {
+        margin: 0 20px 20px 400px;
     }
     .jwxe_menu_box0 {
         display: inline-block;
-        margin-left: 300px;
+        margin-left: 650px;
         width: 100%;
     }
+}
+
+/* 메인 메뉴의 각종 버튼 */
+#login_list li {
+    float: left;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    position: relative;
 }
 
 #jwxe_1297997945786, #jwxe_1297997969913, #jwxe_1298002463910 {

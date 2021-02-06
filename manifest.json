@@ -12,6 +12,10 @@
         {
             "matches": ["*://homepage.sch.ac.kr/sch/*"],
             "js": ["js/homepage.js"]
+        },
+        {
+            "matches": ["*://homepage.sch.ac.kr/minwon"],
+            "js": ["js/minwon.js"]
         }
     ],
 

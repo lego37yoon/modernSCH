@@ -48,8 +48,8 @@ let mainLogo = document.getElementById("schMainLogo");
 mainLogo.setAttribute('src', 'https://portal.sch.ac.kr/_res/p/img/logo.png');
 mainLogo.parentNode.removeAttribute("class");
 mainLogo.parentNode.removeAttribute("style");
-mainLogo.parentNode.setAttribute('style', 'margin: 0px 20px 20px 20px;');
 mainLogo.parentNode.parentNode.style.display = "inline";
+
 //로그인 버튼 변경
 if (document.querySelector("a[href*='/_custom/sch/oAuth/login.jsp']") === null) {
     document.querySelector("a[href*='/_common/login/proc/log_out.jsp']").setAttribute('id', 'loginBtn');
@@ -64,7 +64,6 @@ if(document.querySelector("img[src*='/sch/_res/img/ttmenu_logout.gif']") === nul
 } else {
     headerLogin.innerHTML = "<i class='fas fa-sign-out-alt'></i>";
 }
-headerLogin.parentNode.setAttribute('style', 'position: relative;float: left;margin-left: 4px;');
 headerLogin.parentNode.parentNode.style.width = "";
 //상단 메뉴 | 제거
 let container = document.querySelector("#login_list");
@@ -76,13 +75,11 @@ loginBar.forEach(function(userItem) {
 let headerHome = document.getElementById('jwxe_1300019677522');
 headerHome.style.width = "";
 headerHome.innerHTML = "<i class='fas fa-home'></i>";
-headerHome.parentNode.setAttribute('style', 'position: relative;float: left;margin-left: 5px;');
 //영문 버튼 텍스트로
 document.querySelector("a[href*='/english']").setAttribute('id', 'EnglishBtn');
 let headerEnglish = document.getElementById('EnglishBtn');
 headerEnglish.style.width = "";
 headerEnglish.innerHTML = "<i class='fas fa-globe-americas'></i>";
-headerEnglish.parentNode.setAttribute('style', 'position: relative;float: left;margin-left: 5px; margin-right: 5px;');
 
 //메인 메뉴 스타일 변경
 document.getElementsByClassName("jwxe_menu_box0")[0].removeAttribute("style");
