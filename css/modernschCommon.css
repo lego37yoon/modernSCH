@@ -9,6 +9,8 @@
 
 html {
     font-family: 'GoyangIlsan', 'Noto Sans KR', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 i {
@@ -41,19 +43,17 @@ i {
 }
 .jwxe_menu_box0 li {
     font-size: 20px;
-    margin: 10px 20px 0 20px;
+    margin: 0px 20px 0 20px;
     display: inline;
 }
 .jwxe_menu_box0 li a {
     color: #007681;
     text-decoration: none;
+    margin-top: 20px;
 }
-.jwxe_menu_box0 li .jwxe_ul {
-    background-color: white;
-    border: 1px solid #007681;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+
+#menuView0, #menuView1, #menuView2 {
+    display: none;
 }
 
 @media screen and (min-width: 995px) {
@@ -61,11 +61,11 @@ i {
         margin-top: 20px;
     }
     .Top_Menu .jwxe_html h1 {
-        margin: 0 20px 20px 400px;
+        margin: 0 20px 20px 18vw;
     }
     .jwxe_menu_box0 {
         display: inline-block;
-        margin-left: 650px;
+        margin-left: calc(18vw + 250px);
         width: 100%;
     }
 }
@@ -77,7 +77,20 @@ i {
     margin-right: 2.5px;
     position: relative;
 }
+#login_list {
+    right: 18vw;
+}
 
+/* Main Visual*/
+#new_main_visual2 ul.slide {
+    width:100%;
+    position:relative;
+}
+#new_main_visual2 ul.slide li, #new_main_visual ul.slide li img {
+    position:absolute;
+}
+
+/* 메인 화면 */
 #jwxe_1297997945786, #jwxe_1297997969913, #jwxe_1298002463910 {
     color: white;
     background-color: #00687F;

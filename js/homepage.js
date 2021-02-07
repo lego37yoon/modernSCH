@@ -41,6 +41,11 @@ document.querySelector("link[href*='/sch/_css/layout.css']").remove();
 //너비 설정 무력화
 document.getElementsByClassName("lo_995")[0].style.width = "100%";
 document.getElementsByClassName("jwxe_root")[0].removeAttribute("style");
+try {
+    document.getElementsByClassName("Top_Menu")[0].removeAttribute("style");
+} catch {
+    console.log("Already applied");
+}
 //로고 투명으로
 document.getElementsByClassName("jwxe_html")[0].removeAttribute("style");
 document.querySelector("img[src*='/sch/_res/img/logo.gif']").setAttribute('id', 'schMainLogo');
@@ -83,6 +88,10 @@ headerEnglish.innerHTML = "<i class='fas fa-globe-americas'></i>";
 
 //메인 메뉴 스타일 변경
 document.getElementsByClassName("jwxe_menu_box0")[0].removeAttribute("style");
+//메인메뉴 삭제
+for (let menuNum = 1; menuNum < 7; menuNum++) {
+    document.getElementsByClassName("jwxe_ul")[1].remove();
+}
 //메인 메뉴 이미지 제거
 //대학소개
 let univIntro = document.getElementById('jwxe_1298022569424');
@@ -91,45 +100,13 @@ univIntro.removeAttribute("class");
 univIntro.style.width = "";
 univIntro.style.top = "";
 univIntro.style.height = "";
-let uISCHInfo = document.getElementById('jwxe_1298022569866');
-uISCHInfo.innerHTML = "순천향안내";
-uISCHInfo.style.color = "#00687F";
-let schSymbol = document.getElementById('jwxe_1298022569503');
-schSymbol.innerHTML = "학교상징";
-schSymbol.style.color = "#00687F";
-let schStatus = document.getElementById('jwxe_1298022570352');
-schStatus.innerHTML = "현황"
-schStatus.style.color = "#00687F";
-schStatus.style.left = "130px";
-let schPromo = document.getElementById('jwxe_1298022570125');
-schPromo.innerHTML = "대학홍보";
-schPromo.style.color = "#00687F";
-schPromo.style.left = "165px";
-let univIpsi = document.getElementById('jwxe_1298022569947');
 //입학안내
+let univIpsi = document.getElementById('jwxe_1298022569947');
 univIpsi.innerHTML = "입학안내";
 univIpsi.removeAttribute("class");
 univIpsi.style.width = "";
 univIpsi.style.top = "";
 univIpsi.style.height = "";
-let univGo = document.getElementById('jwxe_1298022569642');
-univGo.innerHTML = "대학입학";
-univGo.style.color = "#00687F";
-let gradGo = document.getElementById('jwxe_1298022570094');
-gradGo.innerHTML = "대학원 입학";
-gradGo.style.color = "#00687F";
-gradGo.style.left = "60px";
-gradGo.style.width = "70px";
-let foreGo = document.getElementById('jwxe_1298022570194');
-foreGo.innerHTML = "외국인입학";
-foreGo.style.color = "#00687F";
-foreGo.style.left = "135px";
-foreGo.style.width = "70px";
-let alwaysEdu = document.getElementById('jwxe_1298022570173');
-alwaysEdu.innerHTML = "평생교육원";
-alwaysEdu.style.color = "#00687F";
-alwaysEdu.style.left = "205px";
-alwaysEdu.style.width = "70px";
 //대학 혹은 대학원
 let univDeparts = document.getElementById('jwxe_1298022569714');
 univDeparts.innerHTML = "대학/대학원";
@@ -137,13 +114,6 @@ univDeparts.removeAttribute("class");
 univDeparts.style.width = "";
 univDeparts.style.top = ""
 univDeparts.style.height = "";
-let departUniv = document.getElementById('jwxe_1298022569971');
-departUniv.innerHTML = "단과대학"
-departUniv.style.color = "#00687F";
-let departGrad = document.getElementById('jwxe_1298022570279');
-departGrad.innerHTML = "대학원";
-departGrad.style.color = "#00687F";
-departGrad.style.left = "60px";
 //대학 기관
 let univLab = document.getElementById('jwxe_1298022569758');
 univLab.innerHTML = "대학기관";
@@ -151,28 +121,6 @@ univLab.removeAttribute("class");
 univLab.style.width = "";
 univLab.style.top = "";
 univLab.style.height = "";
-let univCenter = document.getElementById('jwxe_1298022569949');
-univCenter.innerHTML = "대학본부";
-univCenter.style.color = "#00687F";
-let univCorp = document.getElementById('jwxe_1298022569912');
-univCorp.innerHTML = "산학/연구";
-univCorp.style.color = "#00687F";
-univCorp.style.left = "60px";
-let univChild = document.getElementById('jwxe_1298022570226');
-univChild.innerHTML = "부속/부설";
-univChild.style.color = "#00687F";
-univChild.style.left = "130px";
-univChild.style.width = "100px";
-let univPrime = document.getElementById('jwxe_1369098801234');
-univPrime.innerHTML = "PRIME";
-univPrime.style.color = "#00687F";
-univPrime.style.left = "200px";
-univPrime.style.width = "60px";
-let univHospital = document.getElementById('jwxe_1298022569764');
-univHospital.innerHTML = "부속병원";
-univHospital.style.color = "#00687F";
-univHospital.style.left = "250px";
-univHospital.style.width = "60px";
 //대학 생활
 let univLife = document.getElementById('jwxe_1298022570062');
 univLife.innerHTML = "대학생활";
@@ -180,43 +128,6 @@ univLife.removeAttribute("class");
 univLife.style.width = "";
 univLife.style.top = ""
 univLife.style.height = "";
-let univSchedule = document.getElementById('jwxe_1298022569810');
-univSchedule.innerHTML = "학사일정";
-univSchedule.style.color = "#00687F";
-univSchedule.style.width = "60px";
-let univIntranet = document.getElementById('jwxe_1298022570037');
-univIntranet.innerHTML = "인트라넷";
-univIntranet.style.color = "#00687F";
-univIntranet.style.width = "80px";
-let univAnyQ = document.getElementById('jwxe_1298022570342');
-univAnyQ.innerHTML = "AnyQ";
-univAnyQ.style.color = "#00687F";
-univAnyQ.style.width = "80px";
-univAnyQ.style.left = "120px";
-let univNew = document.getElementById('jwxe_1298022570257');
-univNew.innerHTML = "새소식";
-univNew.style.color = "#00687F";
-univNew.style.width = "60px";
-univNew.style.left = "160px";
-let univNumSearch = document.getElementById('jwxe_1298022570612');
-univNumSearch.innerHTML = "전화번호검색";
-univNumSearch.style.color = "#00687F";
-univNumSearch.style.width = "80px";
-univNumSearch.style.left = "205px";
-let univMailSearch = document.getElementById('jwxe_1298022570452');
-univMailSearch.innerHTML = "메일검색";
-univMailSearch.style.color = "#00687F";
-univMailSearch.style.width = "80px";
-let univCare = document.getElementById('jwxe_1298022570296');
-univCare.innerHTML = "학생복지";
-univCare.style.color = "#00687F";
-univCare.style.width = "80px";
-univCare.style.left = "345px";
-let univStuGroup = document.getElementById('jwxe_1298022570108');
-univStuGroup.innerHTML = "학생자치기구";
-univStuGroup.style.color = "#00687F";
-univStuGroup.style.width = "80px";
-univStuGroup.style.left = "400px";
 //순천향 세상
 let univWorld = document.getElementById('jwxe_1298022569694');
 univWorld.innerHTML = "순천향세상";
@@ -224,40 +135,31 @@ univWorld.removeAttribute("class");
 univWorld.style.width = "";
 univWorld.style.top = "";
 univWorld.style.height = "";
-let univNotice = document.getElementById('jwxe_1298022570448');
-univNotice.innerHTML = "공지사항";
-univNotice.style.color = "#00687F";
-univNotice.style.width = "60px";
-let univMNotice = document.getElementById('jwxe_1298022570002');
-univMNotice.innerHTML = "입찰공고";
-univMNotice.style.color = "#00687F";
-univMNotice.style.width = "60px";
-let univFreeboard = document.getElementById('jwxe_1298022570745');
-univFreeboard.innerHTML = "자유게시판";
-univFreeboard.style.color = "#00687F";
-univFreeboard.style.width = "70px";
-univFreeboard.style.left = "118px";
-let univExchange = document.getElementById('jwxe_1298022570321');
-univExchange.innerHTML = "벼룩시장";
-univExchange.style.color = "#00687F";
-univExchange.style.width = "60px";
-univExchange.style.left = "190px";
+//기타 메뉴
 let univAllMenu = document.getElementById('jwxe_1305609065745');
 univAllMenu.innerHTML = "메뉴 전체보기"
 univAllMenu.style.fontSize = "11px";
-univAllMenu.style.width = "80px";
+univAllMenu.style.top = "0px";
+univAllMenu.style.left = "";
+univAllMenu.style.right = "calc(18vw + 105px)";
+univAllMenu.style.width = "100px";
 univAllMenu.style.color = "#00687F";
 let univAllDepart = document.getElementById('jwxe_1305609293490');
 univAllDepart.innerHTML = "학과 / 전공보기"
 univAllDepart.style.fontSize = "11px";
+univAllDepart.style.top = "15px";
+univAllDepart.style.left = "";
+univAllDepart.style.right = "calc(18vw + 105px)";
 univAllDepart.style.width = "100px";
 univAllDepart.style.color = "#00687F";
 let univNetwork = document.getElementById('jwxe_1305609562261');
 univNetwork.innerHTML = "바로가기"
 univNetwork.style.fontSize = "11px";
-univNetwork.style.width = "80px";
+univNetwork.style.top = "30px";
+univNetwork.style.left = "";
+univNetwork.style.right = "calc(18vw + 105px)"
+univNetwork.style.width = "100px";
 univNetwork.style.color = "#00687F";
-
 
 //메인 이미지 정렬 및 색상 채우기
 let mainBannerNum = 0;
@@ -282,6 +184,7 @@ for (let i = 1; i < 7; i++) {
         }
     }
 }
+
 
 /* 메인 컨텐츠*/
 //하단 녹색 제거
