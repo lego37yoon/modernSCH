@@ -95,49 +95,49 @@ for (let menuNum = 1; menuNum < 7; menuNum++) {
 //메인 메뉴 이미지 제거
 //대학소개
 let univIntro = document.getElementById('jwxe_1298022569424');
-univIntro.innerHTML = "대학소개";
+univIntro.textContent = "대학소개";
 univIntro.removeAttribute("class");
 univIntro.style.width = "";
 univIntro.style.top = "";
 univIntro.style.height = "";
 //입학안내
 let univIpsi = document.getElementById('jwxe_1298022569947');
-univIpsi.innerHTML = "입학안내";
+univIpsi.textContent = "입학안내";
 univIpsi.removeAttribute("class");
 univIpsi.style.width = "";
 univIpsi.style.top = "";
 univIpsi.style.height = "";
 //대학 혹은 대학원
 let univDeparts = document.getElementById('jwxe_1298022569714');
-univDeparts.innerHTML = "대학/대학원";
+univDeparts.textContent = "대학/대학원";
 univDeparts.removeAttribute("class");
 univDeparts.style.width = "";
 univDeparts.style.top = ""
 univDeparts.style.height = "";
 //대학 기관
 let univLab = document.getElementById('jwxe_1298022569758');
-univLab.innerHTML = "대학기관";
+univLab.textContent = "대학기관";
 univLab.removeAttribute("class");
 univLab.style.width = "";
 univLab.style.top = "";
 univLab.style.height = "";
 //대학 생활
 let univLife = document.getElementById('jwxe_1298022570062');
-univLife.innerHTML = "대학생활";
+univLife.textContent = "대학생활";
 univLife.removeAttribute("class");
 univLife.style.width = "";
 univLife.style.top = ""
 univLife.style.height = "";
 //순천향 세상
 let univWorld = document.getElementById('jwxe_1298022569694');
-univWorld.innerHTML = "순천향세상";
+univWorld.textContent = "순천향세상";
 univWorld.removeAttribute("class");
 univWorld.style.width = "";
 univWorld.style.top = "";
 univWorld.style.height = "";
 //기타 메뉴
 let univAllMenu = document.getElementById('jwxe_1305609065745');
-univAllMenu.innerHTML = "메뉴 전체보기"
+univAllMenu.textContent = "메뉴 전체보기"
 univAllMenu.style.fontSize = "11px";
 univAllMenu.style.top = "0px";
 univAllMenu.style.left = "";
@@ -145,7 +145,7 @@ univAllMenu.style.right = "calc(18vw + 105px)";
 univAllMenu.style.width = "100px";
 univAllMenu.style.color = "#00687F";
 let univAllDepart = document.getElementById('jwxe_1305609293490');
-univAllDepart.innerHTML = "학과 / 전공보기"
+univAllDepart.textContent = "학과 / 전공보기"
 univAllDepart.style.fontSize = "11px";
 univAllDepart.style.top = "15px";
 univAllDepart.style.left = "";
@@ -153,7 +153,7 @@ univAllDepart.style.right = "calc(18vw + 105px)";
 univAllDepart.style.width = "100px";
 univAllDepart.style.color = "#00687F";
 let univNetwork = document.getElementById('jwxe_1305609562261');
-univNetwork.innerHTML = "바로가기"
+univNetwork.textContent = "바로가기"
 univNetwork.style.fontSize = "11px";
 univNetwork.style.top = "30px";
 univNetwork.style.left = "";
@@ -193,18 +193,18 @@ document.body.style.backgroundColor = "white";
 try {
     // 순천향인 버튼 제거, 속성 지정, 버튼 디자인
     let schPeopleBtn = document.getElementById("jwxe_1297997945786");
-    schPeopleBtn.innerHTML = "순천향인";
+    schPeopleBtn.textContent = "순천향인";
     schPeopleBtn.style.width = "70px";
     schPeopleBtn.setAttribute('class','pure-button');
     //교직원 버튼 제거, 속성 지정, 버튼 디자인
     let schProfessorBtn = document.getElementById("jwxe_1297997969913");
-    schProfessorBtn.innerHTML = "교직원";
+    schProfessorBtn.textContent = "교직원";
     schProfessorBtn.style.width = "70px";
     schProfessorBtn.style.left = "70px";
     schProfessorBtn.setAttribute('class','pure-button');
     //방문인 버튼 제거, 속성 지정, 버튼 디자인
     let schVisitorBtn = document.getElementById("jwxe_1298002463910");
-    schVisitorBtn.innerHTML = "방문인";
+    schVisitorBtn.textContent = "방문인";
     schVisitorBtn.style.width = "70px";
     schVisitorBtn.style.left = "144px";
     schVisitorBtn.setAttribute('class', 'pure-button');
@@ -219,30 +219,30 @@ try {
     }
     //공지 제목들 스타일 조정
     let schNotice = document.getElementById("jwxe_1298005370608");
-    schNotice.innerHTML = "공지사항";
+    schNotice.textContent = "공지사항";
     schNotice.setAttribute('class', 'pure-button');
     schNotice.setAttribute('style', '');
     schNotice.parentNode.parentNode.parentNode.style.left = "250px";
     schNotice.parentNode.parentNode.parentNode.style.width = "400px";
     schNotice.parentNode.parentNode.parentNode.style.top = "10px";
     let schScheduleNotice = document.getElementById("jwxe_1298005426312");
-    schScheduleNotice.innerHTML = "학사공지";
+    schScheduleNotice.textContent = "학사공지";
     schScheduleNotice.setAttribute('class', 'pure-button');
     schScheduleNotice.setAttribute('style', '');
     let schJobNotice = document.getElementById("jwxe_1298005460497");
-    schJobNotice.innerHTML = "취업정보";
+    schJobNotice.textContent = "취업정보";
     schJobNotice.setAttribute('class', 'pure-button');
     schJobNotice.setAttribute('style', '');
     let schSupportNotice = document.getElementById("jwxe_1298005501500");
-    schSupportNotice.innerHTML = "장학공지";
+    schSupportNotice.textContent = "장학공지";
     schSupportNotice.setAttribute('class', 'pure-button');
     schSupportNotice.setAttribute('style', '');
     let schCorpNotice = document.getElementById("jwxe_1298005544582");
-    schCorpNotice.innerHTML = "입찰공고";
+    schCorpNotice.textContent = "입찰공고";
     schCorpNotice.setAttribute('class', 'pure-button');
     schCorpNotice.setAttribute('style', '');
     let schEventNotice = document.getElementById("jwxe_1298005544584");
-    schEventNotice.innerHTML = "행사안내";
+    schEventNotice.textContent = "행사안내";
     schEventNotice.setAttribute('class', 'pure-button');
     schEventNotice.setAttribute('style', '');
     schEventNotice.parentNode.parentNode.parentNode.style.left = "630px";
@@ -251,7 +251,7 @@ try {
     schEventNotice.parentNode.parentNode.style.left = "";
     schEventNotice.parentNode.childNodes[3].style.left = "";
     let schNewsNotice = document.getElementById("jwxe_1298005544588");
-    schNewsNotice.innerHTML = "언론 속 순천향"
+    schNewsNotice.textContent = "언론 속 순천향"
     schNewsNotice.setAttribute('class', 'pure-button');
     schNewsNotice.setAttribute('style', '');
 
@@ -260,7 +260,7 @@ try {
     schNoticeMore.style.top = "-45px";
     schNoticeMore.style.fontWeight = "bold"
     schNoticeMore.style.fontSize = "20pt";
-    schNoticeMore.innerHTML = "+"
+    schNoticeMore.textContent = "+"
     schNoticeMore.style.color = "#00687F"
     schNoticeMore.style.textDecoration = "none";
     let schScheduleNoticeMore = document.getElementById("jwxe_1298007956826");
@@ -268,7 +268,7 @@ try {
     schScheduleNoticeMore.style.top = "-45px";
     schScheduleNoticeMore.style.fontWeight = "bold"
     schScheduleNoticeMore.style.fontSize = "20pt";
-    schScheduleNoticeMore.innerHTML = "+"
+    schScheduleNoticeMore.textContent = "+"
     schScheduleNoticeMore.style.color = "#00687F"
     schScheduleNoticeMore.style.textDecoration = "none";
     let schJobNoticeMore = document.getElementById("jwxe_1298007999987");
@@ -276,7 +276,7 @@ try {
     schJobNoticeMore.style.top = "-45px";
     schJobNoticeMore.style.fontWeight = "bold"
     schJobNoticeMore.style.fontSize = "20pt";
-    schJobNoticeMore.innerHTML = "+"
+    schJobNoticeMore.textContent = "+"
     schJobNoticeMore.style.color = "#00687F"
     schJobNoticeMore.style.textDecoration = "none";
     let schSupportNoticeMore = document.getElementById("jwxe_1298008038440");
@@ -284,7 +284,7 @@ try {
     schSupportNoticeMore.style.top = "-45px";
     schSupportNoticeMore.style.fontWeight = "bold"
     schSupportNoticeMore.style.fontSize = "20pt";
-    schSupportNoticeMore.innerHTML = "+"
+    schSupportNoticeMore.textContent = "+"
     schSupportNoticeMore.style.color = "#00687F"
     schSupportNoticeMore.style.textDecoration = "none";
     let schCorpNoticeMore = document.getElementById("jwxe_1298008077443");
@@ -292,7 +292,7 @@ try {
     schCorpNoticeMore.style.top = "-45px";
     schCorpNoticeMore.style.fontWeight = "bold"
     schCorpNoticeMore.style.fontSize = "20pt";
-    schCorpNoticeMore.innerHTML = "+"
+    schCorpNoticeMore.textContent = "+"
     schCorpNoticeMore.style.color = "#00687F"
     schCorpNoticeMore.style.textDecoration = "none";
     //공지 목록들 스타일 조정
@@ -316,14 +316,14 @@ try {
 
     //순천향 큰배너 디자인 변경
     let bigBannerPlay = document.querySelector("a[onclick*='javascript:popupOn();']");
-    bigBannerPlay.innerHTML = "▶";
+    bigBannerPlay.textContent = "▶";
     bigBannerPlay.style.color = "#00687F";
     bigBannerPlay.parentNode.style.top = "-5px";
     bigBannerPlay.parentNode.style.left = "100px";
     bigBannerPlay.style.fontSize = "12pt";
     bigBannerPlay.style.textDecoration = "none";
     let bigBannerStop = document.querySelector("a[onclick*='javascript:popupOff();']");
-    bigBannerStop.innerHTML = "⏸";
+    bigBannerStop.textContent = "⏸";
     bigBannerStop.style.color = "#00687F";
     bigBannerStop.style.fontSize = "12pt";
     bigBannerStop.style.textDecoration = "none";
@@ -333,7 +333,7 @@ try {
     document.getElementById('t4').style.background = "";
     document.getElementById('t5').style.background = "";
     let bigBannerFirst = document.getElementById('jwxe_1300156697356');
-    bigBannerFirst.innerHTML = "1";
+    bigBannerFirst.textContent = "1";
     bigBannerFirst.style.backgroundColor = "#00687F";
     bigBannerFirst.style.color = "white";
     bigBannerFirst.style.left = "140px";
@@ -344,7 +344,7 @@ try {
     bigBannerFirst.style.top = "3px";
     bigBannerFirst.style.textAlign = "center";
     let bigBannerSecond = document.getElementById('jwxe_1298009735836');
-    bigBannerSecond.innerHTML = "2";
+    bigBannerSecond.textContent = "2";
     bigBannerSecond.style.backgroundColor = "#00687F";
     bigBannerSecond.style.color = "white";
     bigBannerSecond.style.left = "156px";
@@ -355,7 +355,7 @@ try {
     bigBannerSecond.style.top = "3px";
     bigBannerSecond.style.textAlign = "center";
     let bigBannerThree = document.getElementById('jwxe_1298009655708');
-    bigBannerThree.innerHTML = "3";
+    bigBannerThree.textContent = "3";
     bigBannerThree.style.backgroundColor = "#00687F";
     bigBannerThree.style.color = "white";
     bigBannerThree.style.left = "172px";
@@ -366,7 +366,7 @@ try {
     bigBannerThree.style.top = "3px";
     bigBannerThree.style.textAlign = "center";
     let bigBannerFour = document.getElementById('jwxe_1298009694996');
-    bigBannerFour.innerHTML = "4";
+    bigBannerFour.textContent = "4";
     bigBannerFour.style.backgroundColor = "#00687F";
     bigBannerFour.style.color = "white";
     bigBannerFour.style.left = "188px";
@@ -377,7 +377,7 @@ try {
     bigBannerFour.style.top = "3px";
     bigBannerFour.style.textAlign = "center";
     let bigBannerFive = document.getElementById('jwxe_1298009694999');
-    bigBannerFive.innerHTML = "5";
+    bigBannerFive.textContent = "5";
     bigBannerFive.style.backgroundColor = "#00687F";
     bigBannerFive.style.color = "white";
     bigBannerFive.style.left = "204px";
@@ -458,18 +458,18 @@ try {
     //개인정보 취급방침 대체
     document.querySelector("a[href*='/sch/pop/pop_privacy_policy.jsp']").setAttribute('id', 'footerPolicy'); //ID 생성
     let policy = document.getElementById('footerPolicy');
-    policy.innerHTML = "개인정보 취급방침"; //텍스트 삽입
+    policy.textContent = "개인정보 취급방침"; //텍스트 삽입
     policy.removeAttribute("class");
     policy.removeAttribute("style");
     policy.setAttribute('style', 'margin-left: 10px; color: cornflowerblue;'); //색상 설정
     //대학 정보 공시 대체
     document.querySelector("a[href*='http://www.academyinfo.go.kr/pubinfo/pubinfo1600/doInit.do?schlId=0000142']").setAttribute('id', 'footerInfo'); //ID 생성
     let infoLink = document.getElementById("footerInfo");
-    infoLink.innerHTML = "대학정보공시"
+    infoLink.textContent = "대학정보공시"
     //원격 지원 서비스 대체
     document.querySelector("a[href*='http://1.sch.ac.kr']").setAttribute('id', 'footerRemote'); //ID 생성
     let remoteService = document.getElementById("footerRemote");
-    remoteService.innerHTML = "원격지원서비스"
+    remoteService.textContent = "원격지원서비스"
     //바로가기 조정
     document.querySelector("div[style*='left:800px;width:190px;height:30px;']").setAttribute('id', 'footerGo'); //ID 생성
     let toGo = document.getElementById('footerGo');
