@@ -1,14 +1,13 @@
 @font-face {
-    font-family: 'GoyangIlsan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
+    font-family: 'IBMPlexSansKR-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 
 html {
-    font-family: 'GoyangIlsan', 'Noto Sans KR', sans-serif;
+    font-family: 'IBMPlexSansKR-ExtraLight', 'Noto Sans KR', sans-serif;
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -19,22 +18,56 @@ i {
     margin: 5px;
 }
 
+#go_main {
+    font-size: 0;
+    list-style-type: none;
+}
+
+.grid_layout {
+    display: grid;
+}
+
 .lo_995 {
     clear: both;
     position: relative;
 }
 
-.Top_Menu {
-    margin-top: 5px;
+.Top_Menu,
+.Top {
     color: #00687F;
     text-decoration: none;
-    border-bottom: 1px solid #007681;
-    height: 52px;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 48px;
 }
 
 /* 메인 로고 */
-.Top_Menu .jwxe_html h1 {
-    margin: 0 20px 20px 20px;
+.Top_Menu .jwxe_html h1 a img,
+.Top .jwxe_html h1 a img{
+    margin: 6px 20px 6px 20px;
+    height: 36px;
+}
+
+/* 메인 비주얼 */
+#Main_Visual {
+    background: url(https://home.sch.ac.kr/_res/sch/img/main_visual_01.jpg) no-repeat 50% 50%/cover;
+    height: 950px;
+    position: relative;
+}
+
+.main_visual_text {
+    max-width: 1450px;
+    text-align: end;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    margin-top: 700px;
+}
+
+.sch_gradient {
+    background: linear-gradient(to right, #92C83E 15%, #269867 75%, #1697BE 100%) text;
+    font-size: 72pt;
+    font-weight: 700;
+    color: transparent;
 }
 
 /* 메인 메뉴 */
@@ -57,12 +90,6 @@ i {
 }
 
 @media screen and (min-width: 995px) {
-    .Top_Menu {
-        margin-top: 20px;
-    }
-    .Top_Menu .jwxe_html h1 {
-        margin: 0 20px 20px 18vw;
-    }
     .jwxe_menu_box0 {
         display: inline-block;
         margin-left: calc(18vw + 250px);
@@ -70,45 +97,26 @@ i {
     }
 }
 
-/* 메인 메뉴의 각종 버튼 */
-#login_list li {
-    float: left;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
-    position: relative;
-}
-#login_list {
-    right: 18vw;
-}
-
-/* Main Visual*/
-#new_main_visual2 ul.slide {
-    width:100%;
-    position:relative;
-}
-#new_main_visual2 ul.slide li, #new_main_visual ul.slide li img {
-    position:absolute;
-}
-
-/* 메인 화면 */
+/* 순천향인, 교직원, 방문인 */
 #jwxe_1297997945786, #jwxe_1297997969913, #jwxe_1298002463910 {
     color: white;
     background-color: #00687F;
     text-decoration: none;
     text-align: center;
     line-height: 70px;
-    font-size: 10pt;
-    font-family: 'Noto Sans CJK KR', 'Apple SD Gothic Neo', sans-serif;
+    font-size: 12pt;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
 }
 
+/* 공지사항, 학사공지, 취업정보, 장학공지, 입찰공고 */
 #jwxe_1298005370608, #jwxe_1298005426312, #jwxe_1298005460497, #jwxe_1298005501500, #jwxe_1298005544582 {
-    color: white;
-    background-color: #00687F;
+    color: black;
     text-decoration: none;
-    border-radius: 15px;
-    font-size: 9.5pt;
-    height: 30px;
-    width: 60px;
+    border-bottom: 1px solid #00687F;
+    font-size: 14pt;
+    font-family: 'Noto Sans KR', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', sans-serif;
+    /* height: 30px;
+    width: 60px; */
     padding-left: 5px;
     padding-top: 7px;
 }
@@ -122,14 +130,4 @@ i {
     height: 30px;
     padding-left: 15px;
     padding-top: 7px;
-}
-
-#jwxe_1298005370608:hover, #jwxe_1298005426312:hover, #jwxe_1298005460497:hover, #jwxe_1298005501500:hover, #jwxe_1298005544582:hover, #jwxe_1298005544588:hover, #jwxe_1298005544584:hover {
-    color: black;
-    background-color: azure;
-}
-
-#jwxe_1298005370608:focus, #jwxe_1298005426312:focus, #jwxe_1298005460497:focus, #jwxe_1298005501500:focus, #jwxe_1298005544582:focus, #jwxe_1298005544588:focus, #jwxe_1298005544584:focus {
-    color: black;
-    background-color: azure;
 }
