@@ -47,6 +47,22 @@ i {
     height: 36px;
 }
 
+/* 헤더 */
+.Top_Menu,
+.Top,
+.Top_Menu *,
+.Top * {
+    display: inline;
+}
+
+/* 잡다한 메뉴들 */
+#login_list {
+    position: absolute;
+}
+#login_list li{
+    display: inline-block;
+}
+
 /* 메인 비주얼 */
 #Main_Visual {
     background: url(https://home.sch.ac.kr/_res/sch/img/main_visual_01.jpg) no-repeat 50% 50%/cover;
