@@ -16,7 +16,7 @@ pureDropdown.href = browser.extension.getURL("../css/menus-dropdown.css");
 //Noto Sans CJK KR 들여오기
 let notoKR = document.createElement("link");
 notoKR.rel = "stylesheet";
-notoKR.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap";
+notoKR.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap";
 //자체 CSS 들여오기
 let modernschCSS = document.createElement("link");
 modernschCSS.rel = "stylesheet";
@@ -67,11 +67,11 @@ if(document.querySelector("img[src*='/sch/_res/img/ttmenu_logout.gif']") === nul
     headerLogin.innerHTML = "<i class='fas fa-sign-out-alt'></i>";
 }
 //상단 메뉴 | 제거
-let container = document.querySelector("#login_list");
+let container = document.getElementById("login_list");
 let loginBar = container.querySelectorAll("img[src*='https://homepage.sch.ac.kr/sch/_res/img/ttmenu_bar.gif']");
 loginBar.forEach(function(userItem) {
     userItem.remove();
-})
+});
 //홈 버튼 텍스트로
 let headerHome = document.getElementById('jwxe_1300019677522');
 headerHome.innerHTML = "<i class='fas fa-home'></i>";
@@ -124,6 +124,10 @@ let univAllDepart = document.getElementById('jwxe_1305609293490');
 univAllDepart.textContent = "학과 / 전공보기"
 let univNetwork = document.getElementById('jwxe_1305609562261');
 univNetwork.textContent = "바로가기"
+
+//기타 메뉴 뒤에 로그인 메뉴 배치로 변경
+let otherMenus = document.getElementById("menuView2");
+otherMenus.insertAdjacentElement('afterend', container);
 
 //메인 이미지 정렬 및 색상 채우기
 let mainBannerNum = 0;

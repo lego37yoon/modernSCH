@@ -37,80 +37,105 @@ i {
     color: #00687F;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
-    height: 48px;
+    height: 60px;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 /* 메인 로고 */
-.Top_Menu .jwxe_html h1 a img,
-.Top .jwxe_html h1 a img{
-    margin: 6px 20px 6px 20px;
+
+.Top_Menu .jwxe_html {
+    display: inline;
+    align-self: center;
+}
+
+.Top_Menu .jwxe_html h1 a img {
     height: 36px;
+    margin: auto 20px auto 20px;
 }
 
 /* 헤더 */
-.Top_Menu,
-.Top,
-.Top_Menu *,
-.Top * {
-    display: inline;
+
+
+#Top_Main {
+    max-width: 1450px;
 }
 
-/* 잡다한 메뉴들 */
-#login_list {
-    position: absolute;
-}
+/* 로그인, 로그아웃, 홈, 영문 페이지 */
 #login_list li{
     display: inline-block;
+}
+
+#login_list {
+    position: absolute;
+    right: 20px;
+}
+
+/* 메인 메뉴 - 대학소개 입학안내 대학/대학원 대학기관 대학생활 순천향세상 */
+.jwxe_menu_box0 {
+    display: inline-block;
+    align-self: center;
+}
+
+.jwxe_menu_box0 li {
+    margin: 0px 20px 0 20px;
+    display: inline-block;
+}
+
+/* 기타 메뉴 + 메인 메뉴 공통 적용 */
+.jwxe_menu_box0 li a,
+#jwxe_1305609065745,
+#jwxe_1305609293490,
+#jwxe_1305609562261 {
+    color: #007681;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+/* 기타 메뉴 공통 적용 */
+#jwxe_1305609065745,
+#jwxe_1305609293490,
+#jwxe_1305609562261 {
+    margin: 0px 20px 0 20px;
+    display: inline-block;
+    align-self: center;
 }
 
 /* 메인 비주얼 */
 #Main_Visual {
     background: url(https://home.sch.ac.kr/_res/sch/img/main_visual_01.jpg) no-repeat 50% 50%/cover;
+    
     height: 950px;
     position: relative;
+    z-index: 1;
 }
 
 .main_visual_text {
-    max-width: 1450px;
+    max-width: 1550px;
     text-align: end;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 20pt;
+    font-size: 24pt;
     margin-top: 700px;
 }
 
 .sch_gradient {
     background: linear-gradient(to right, #92C83E 15%, #269867 75%, #1697BE 100%) text;
-    font-size: 72pt;
-    font-weight: 700;
+    font-size: 74pt;
+    font-weight: 900;
     color: transparent;
-}
-
-/* 메인 메뉴 */
-.jwxe_menu_box0 {
-    display: none;
-}
-.jwxe_menu_box0 li {
-    font-size: 20px;
-    margin: 0px 20px 0 20px;
-    display: inline;
-}
-.jwxe_menu_box0 li a {
-    color: #007681;
-    text-decoration: none;
-    margin-top: 20px;
 }
 
 #menuView0, #menuView1, #menuView2 {
     display: none;
-}
-
-@media screen and (min-width: 995px) {
-    .jwxe_menu_box0 {
-        display: inline-block;
-        margin-left: calc(18vw + 250px);
-        width: 100%;
-    }
 }
 
 /* 순천향인, 교직원, 방문인 */
