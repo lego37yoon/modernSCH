@@ -172,3 +172,16 @@ i {
     padding-left: 15px;
     padding-top: 7px;
 }
+
+/* 모바일 */
+
+/* 메뉴 */
+@media screen and (max-width: 1750px) {
+    #jwxe_1305609065745,
+    #jwxe_1305609293490,
+    #jwxe_1305609562261,
+    #login_list,
+    .jwxe_menu_box0 {
+        display: none;
+    }
+}
